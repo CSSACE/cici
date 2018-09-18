@@ -1,71 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
-<head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<title>中秋</title>
-	<meta name="keywords" content="关键字列表" />
-	<meta name="description" content="网页描述" />
-	<link rel="stylesheet" type="text/css" href="" />
-	<style type="text/css">
-		body{ margin:0;}
-    </style>
-	<script type="text/javascript"></script>
-</head>
- <body>
- <!--导航部分开始-->
-  <table width="760" align="center" border="0" cellpadding="0" cellspacing="0">
-  	<tr><td><img src="img/bg_r1_c1.gif"/></td><td rowspan="2" background="img/bg_r1_c2.gif" width="410">
-	<!--flash begin-->
-	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="410" height="190">
-  <param name="movie" value="img/flash_header.swf">
-  <param name="quality" value="high">
-  <param name="wmode" value="transparent">
-  <embed src="img/flash_header.swf" width="410" height="190" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed>
-  </object>
-
-	<!--flash end-->
-	</td></tr>
-  	<tr><td><img src="img/bg_r2_c1.gif"/></td></tr>
-  </table>
-   <!--导航部分结束-->
-   <!--主体内容开始-->
-<table width="760" align="center" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td rowspan="2"><img src="img/bg_r3_c1.gif" /></td>
-	<td background="img/bg_r3_c2.gif" height="232">
-	<!--滚动的开始-->
-	<marquee direction="up">
-	月有阴晴圆缺，<br />
-人有悲欢离合，<br />
-此事古难全。<br />
-中秋节离我们越来越近了，<br />
-每年的中秋你都怎样度过？<br />
-是否心中怀着那种牵肠挂肚的亲情之念？<br />
-是否胸中藏着明月千里的相思之情？<br />
-你或你的他（她）在月圆之时，<br />
-是否有着无尽的话儿要诉说？<br />
-铺展心中的那份感动，<br />
-将这些情愫表达出来，<br />
-让清风带去我们的讯息，<br />
-让月儿明了我们的心事，<br />
-让不在身边的他们有所感知……
-	</marquee>
-	<!--滚动的结束-->
-	</td>
-	<td rowspan="2"><img src="img/bg_r3_c3.gif" /></td>
-</tr>
-<tr>
-	<td><img src="img/bg_r4_c2.gif" /></td>
-</tr>
-</table>
-   <!--主体内容结束-->
-   <table width="760" align="center" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td><img src="img/bg_r5_c1.gif" width="760" height="60" border="0" alt=""></td>
-</tr>
-<tr>
-	<td><img src="img/bg_r6_c1.gif" width="760" height="60" border="0" alt=""></td>
-</tr>
-</table>
+<!doctype html>
+<html lang="en" onclick="init(event)">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+  //实例：点出满天小星星
+  /*
+		(1)给<html>添加onclick事件
+		(2)更改网页背景色
+		(3)创建图片节点，并追加到body父节点下
+		(4)图片定位
+		(5)图片随机大小
+		()
+  */
+  function init(e)
+  {
+	  //(3)
+	  var imgObj = document.createElement("img");
+	  document.body.appendChild(imgObj);
+	  //添加src属性
+	  imgObj.src = "xingxing.gif";
+	  //添加width属性
+	  imgObj.width = getRandom(15,85);
+	  //添加style属性
+	  var x = e.clientX ? e.clientX :event.clientX;
+	  var y = e.clientY ? e.clientY :event.clientY;
+	  imgObj.style.position = "absolute";
+	  imgObj.style.left = x - imgObj.width/2 + "px";
+	  imgObj.style.top = y - imgObj.width/2 + "px";
+  }
+  function getRandom(min,max)
+  {
+	  var random = Math.random()*(max-min)+min;
+	  random = Math.floor(random);
+	  return random;
+  }
+  </script>
+ </head>
+ <body style="background-color:#000">
+  
  </body>
 </html>
